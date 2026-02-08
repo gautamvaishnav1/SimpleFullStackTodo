@@ -1,11 +1,11 @@
 const mongoose=require('mongoose')
 
 const todoSchema=new mongoose.Schema({
-    todoWork:{
+    todoName:{
         required:true,
         type:String
     },
-    todoDate:{
+    todoCompleteDate:{
         required:true,
         type:Date,
         default:Date.now()
@@ -18,6 +18,6 @@ const todoSchema=new mongoose.Schema({
     timestamps:true
 })
 
-const todoModel=mongoose.model('todo',todoSchema)
+const todoTaskModel=mongoose.model('todo',todoSchema)
 
-module.exports=todoModel;
+module.exports=todoTaskModel;
